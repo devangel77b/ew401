@@ -1,0 +1,2 @@
+v1.0.1, Fa2016 -- Able Alfa, created w previous course materials from Cpt Shorr
+v2.0.1, Fa2017 -- Binzel Bravo, current version

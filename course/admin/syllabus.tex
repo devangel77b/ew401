@@ -1,0 +1,205 @@
+\documentclass[10pt]{article}
+
+
+\usepackage{fullpage}
+
+\usepackage{termcal}
+\renewcommand{\calprintdate}{%
+\ifnewmonth 
+\framebox{\monthname\ \arabic{date}}%
+\else 
+\arabic{date}
+\fi}
+\renewcommand{\calprintclass}{}
+
+\newcommand{\myroot}{../..}
+\usepackage{\myroot/course}
+
+
+\begin{document}
+\begin{center}
+\textbf{\usnaCourseNumber\ \usnaCourseName, sections \usnaCourseSections}\\
+\textbf{\courseTerm}\footnote{Syllabus version from \today}
+\end{center}
+
+\begin{calendar}{8/20/2018}{18}
+\setlength{\calboxdepth}{0.6in}
+\calday[\textup{M}]{\classday}
+\calday[\textup{T (lab)}]{\classday}
+\calday[\textup{W}]{\classday}
+\skipday%\calday[R]{\noclassday}
+\calday[\textup{F}]{\classday}
+\skipday
+\skipday
+
+% holidays and time warps
+\caltext{9/3/2018}{\textbf{Labor Day, no class}}
+%\options{10/9/2017}{\noclassday}
+\caltext{9/4/2018}{\textbf{Monday schedule}}
+\caltext{10/8/2018}{\textbf{Columbus Day, no class}}
+%\caltext{10/13/2018}{USN Birthday}
+\caltext{10/31/2018}{\textbf{Halloween}}
+%\options{11/12/2018}{\noclassday}
+\caltext{11/12/2018}{\textbf{Veteran's Day, no class}}
+%\caltext{11/10/2018}{USMC Birthday}
+%\options{11/22/2018}{\noclassday}
+%\caltext{11/21/2018}{\textbf{Early schedule?}}
+\caltext{11/22/2018}{\textbf{Thanksgiving, no class}}
+%\options{11/23/2018}{\noclassday}
+\caltext{11/23/2018}{\textbf{Thanksgiving, no class}}
+\caltext{12/6/2018}{End of term}
+%\options{12/7/2018}{\noclassday}
+\caltext{12/7/2018}{Review \& Study Day}
+\caltext{12/10/2018}{Review \& Study Day}
+
+% academic dates
+\caltext{\addDate}{\textbf{Add Date}}
+%\caltext{11/8/2017}{\textbf{Drop Date on 11/9}}
+\caltext{\dropDate}{Drop Date}
+\caltext{\firstFinal}{\textbf{First day of finals}}%\footnote{Final exam date TBD.}}
+\caltext{\lastFinal}{\textbf{Last day of finals}}
+
+% exams
+\caltext{\examOne}{\textbf{Exam 1}}
+\caltext{\examTwo}{\textbf{Exam 2}}
+\caltext{\examFinal}{\textbf{Final Exam\footnote{The \usnaCourseNumber\ final is TBA, Maury 1st deck. Rooms are by section, TBA.}}}
+
+% ice
+\caltext{\iceOne}{\href{https://drive.google.com/drive/folders/0B1OxG7zTXisdUDZZeVJiTG92bmM?usp=sharing}{ICE 1: Technical communication}}
+\caltext{\iceTwo}{ICE 2: Algorithms}
+\caltext{\iceThree}{ICE 3: mbed intro}
+\caltext{\iceFour}{ICE 4: \lstinline{stdio.h} and logic}
+\caltext{\iceFive}{ICE 5: \lstinline{for} and \lstinline{while} loops}
+\caltext{\iceSix}{ICE 6: oscilloscopes, mbed outputs}
+\caltext{\iceSeven}{ICE 7: \Matlab}
+\caltext{\iceEight}{ICE 8: basic \Matlab\ scripts}
+\caltext{\iceNine}{ICE 9: \Matlab\ \lstinline{function} practice, file input/output}
+\caltext{\iceTen}{ICE 10: \Matlab\ graphics handles and objects}
+\caltext{\iceEleven}{ICE 11: \Matlab\ game graphics development}
+
+% lab
+\caltext{\labOneOut}{Lab 1: digital I/O, user interface, LED activation}
+%\caltext{\labOneDue}{Lab 1 due}
+\caltext{\labTwoOut}{Lab 2: actuation}
+%\caltext{\labTwoDue}{Lab 2 due}
+
+% projects
+\caltext{\projectOneAOut}{\href{https://drive.google.com/a/usna.edu/file/d/1ZV7prgVcH2BZDs266tI0m1B1aXG1JPYy/view?usp=sharing}{Project 1a: Unmanned Lego Vehicle}}
+\caltext{\projectOneADue}{ULV docs due}
+\caltext{\projectOneBOut}{\href{https://drive.google.com/a/usna.edu/file/d/1yPTFM38Lafkptl5thAnI6Pz7ud-yInHr/view?usp=sharing}{Project 1b: ULV continued}}
+\caltext{\projectTwoOut}{Project 2: MechatronBot start}
+\caltext{10/3/2018}{Project 2: MechatronBot}
+\caltext{10/5/2018}{Project 2: MechatronBot}
+\caltext{10/9/2018}{Project 2: MechatronBot}
+\caltext{10/16/2018}{Project 2: MechatronBot}
+\caltext{10/23/2018}{Project 2: MechatronBot}
+%\caltext{\projectTwoPresentationsDue}{\textbf{Project 2 presentations and demos}}
+\caltext{\projectTwoReportDue}{\textbf{Project 2 report due}}
+
+%\caltext{\projectThreeOut}{Project 3: Video game start}
+\caltext{11/6/2018}{Project 3: Video game}
+\caltext{11/13/2018}{Project 3: Video game}
+%\caltext{11/22/2017}{Project 3: Video game}
+\caltext{11/20/2018}{Project 3: Video game}
+\caltext{11/21/2018}{Segway}
+\caltext{11/27/2018}{Project 3: Video game}
+\caltext{11/28/2018}{Project 3: Video game}
+\caltext{11/30/2018}{Project 3: Video game}
+\caltext{\projectThreePresentationsDue}{\textbf{Project 3 presentations and demos}}
+
+% homework
+\caltext{\hwZeroDue}{\href{https://drive.google.com/a/usna.edu/file/d/1HyRF1c-o-3Vympf3M8ZRAvyC0UxVYu2b/view?usp=sharing}{HW0} due}
+\caltext{\hwOneDue}{\href{https://drive.google.com/a/usna.edu/file/d/1vHHn5YSqqzZQ0Yj0ZgR7aARxACq7EA9H/view?usp=sharing}{HW1} due\footnote{Homework due dates may shift.}}
+\caltext{\hwTwoDue}{HW2 due}
+\caltext{\hwThreeDue}{HW3 due}
+\caltext{\hwFourDue}{HW4 due}
+\caltext{\hwFiveDue}{HW5 due}
+\caltext{\hwSixDue}{HW6 due}
+\caltext{\hwSevenDue}{HW7 due}
+\caltext{\hwEightDue}{HW8 due}
+
+
+% lecture topics weekly
+\caltexton{1}{\href{https://drive.google.com/a/usna.edu/file/d/1enIN_St3JUwIWSgI9B1Ewo8l82AwnLxQ/view?usp=sharing}{Overview of Systems Engineering}}
+\caltextnext{}
+\caltextnext{\href{https://drive.google.com/a/usna.edu/file/d/1M_4DbqaXbFlt83SscT2Im26ouDXCxWcM/view?usp=sharing}{Design process}}
+\caltextnext{\href{https://drive.google.com/a/usna.edu/file/d/1grSNzFnPyaQU7QyJpS-mKFRlfOZ0W8GM/view?usp=sharing}{Pseudocode and basic algorithms}}
+
+\caltexton{5}{Pseudocode and basic algorithms}
+\caltextnext{}
+\caltextnext{}
+\caltextnext{}
+
+\caltexton{9}{}
+\caltextnext{Intro to C syntax, variables \& \lstinline{printf}}
+\caltextnext{}
+\caltextnext{Random numbers, arrays, strings}
+
+\caltexton{13}{}
+\caltextnext{C: \lstinline{if}, \lstinline{for} and \lstinline{while} loops}
+\caltextnext{C:  looping with counters}
+\caltextnext{}
+
+\caltexton{17}{mbed input/output}
+\caltextnext{}
+\caltextnext{mbed input/output}
+\caltextnext{mbed input/output, functions, classes, interrupts}
+
+\caltexton{21}{Actuators and motors}
+\caltextnext{}
+\caltextnext{Exam review}
+\caltextnext{}
+
+\caltexton{25}{}
+\caltextnext{}
+\caltextnext{} %Project 2: MechatronBot}
+\caltextnext{} %Project 2: MechatronBot}
+
+\caltexton{29}{}
+\caltextnext{}
+\caltextnext{\Matlab\ basics, numerical computation, matrices, array, data}
+\caltextnext{}
+
+\caltexton{33}{\Matlab\ scripts, publishing}
+\caltextnext{}
+\caltextnext{}
+\caltextnext{}
+
+\caltexton{37}{\Matlab\ functions}
+\caltextnext{Project 2 Presentations}
+\caltextnext{} %\Matlab\ \lstinline{function} practice, file input/output}
+\caltextnext{\Matlab\ serial}
+
+\caltexton{41}{More \Matlab\ serial, bit manipulation}
+\caltextnext{}
+\caltextnext{Exam 2 review}
+\caltextnext{}
+
+\caltexton{45}{\Matlab\ graphics}
+\caltextnext{}
+\caltextnext{\Matlab\ graphics}
+\caltextnext{}
+
+\caltexton{49}{}
+\caltextnext{}
+\caltextnext{\Matlab\ translation, rotation, scaling}
+\caltextnext{}
+
+\caltexton{53}{Serial communcations between \Matlab\ and mbed}
+\caltextnext{}
+\caltextnext{}
+\caltextnext{}
+
+\caltexton{57}{Serial communications between \Matlab\ and mbed}
+\caltextnext{}
+\caltextnext{}
+\caltextnext{}
+
+\caltexton{61}{}
+\caltextnext{}
+\caltextnext{Exam review}
+\caltextnext{}
+
+
+\end{calendar}
+\end{document}
