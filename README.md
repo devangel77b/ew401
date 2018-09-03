@@ -1,4 +1,4 @@
-# es200-latex
+# es401
 
 This repository contains USNA ES200 Introduction to Systems Engineering course materials, mostly in Latex and C. It is revision controlled using git. To obtain a clone of these materials do one of the following:
 ```bash
